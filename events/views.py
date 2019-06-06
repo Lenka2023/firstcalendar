@@ -4,8 +4,12 @@ from django.http import HttpResponse
 def index(request):
    rem_data=''
    if request.method=='POST':
-       rem_data=request.POST   
-  # rem=request.POST.get('rem')   
+      # rem_data=request.POST   
+       st=request.POST.get('st')
+       et=request.POST.get('et')
+       rem=request.POST.get('rem') 
+         if et=st+10:
+             rem=''  
     return HttpResponse("""<html> 
    <body>       
       <form action = "http://localhost:8000/events" method = "post"> 
@@ -17,7 +21,7 @@ def index(request):
 		  <p><input type = "text" name = "rem" /></p>
          <p><input type = "submit" value = "submit" /></p> 
       </form>  
-      {{rem_data}}     
+      {{rem}}     
    </body> 
 </html>""")
 	
