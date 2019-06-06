@@ -5,7 +5,7 @@ def index(request):
    context = {
    'page_header': 'Contacts_form',
    }
-   return render(request, 'default_app/contacts_form.html',context)
+   return render(request, 'events/contacts_form.html',context)
    #rem='10'
   #if request.method=='POST':
       # rem_data=request.POST   
