@@ -2,11 +2,13 @@ from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
 def index(request):
+   rem='10'
    context = {
    'page_header': 'Contacts_form',
    }
-   return render(request, 'events/contacts_form.html',context)
-   #rem='10'
+   return render(request, 'events/contacts_form.html', context)
+
+   
   #if request.method=='POST':
       # rem_data=request.POST   
        #st=request.POST.get('st')

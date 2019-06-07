@@ -1,7 +1,8 @@
-     {% extends 'blog/base.html' %}
+     {% extends 'events/base.html' %}
       {% block content %}
       <form action = "http://localhost:8000/events" method = "post"> 
          <p>Enter Start_time:</p> 
+         {{rem}}
          <p><input type = "text" name = "st" /></p> 
 		 <p>Enter End_time:</p> 
          <p><input type = "text" name = "et" /></p> 
