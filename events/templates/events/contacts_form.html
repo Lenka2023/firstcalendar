@@ -1,8 +1,11 @@
      {% extends 'events/base.html' %}
       {% block content %}
-      <form action = "http://localhost:8000/events" method = "post"> 
+      <form action = "http://localhost:8000/events/" method = "post"> 
+      	{% csrf_token %}
          <p>Enter Start_time:</p> 
          {{rem}}
+         {{contacts_form_data}}
+         {{rem_data}}
          <p><input type = "text" name = "st" /></p> 
 		 <p>Enter End_time:</p> 
          <p><input type = "text" name = "et" /></p> 
