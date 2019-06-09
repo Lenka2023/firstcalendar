@@ -9,7 +9,7 @@ def index(request):
        st=request.POST.get('st')
        et=request.POST.get('et')
        
-       if int(et)<int(st)+10:
+       if int(et)>=int(st)+10:
              rem=request.POST.get('rem')
        elif int(et)<int(st)+10:
                 rem='' 
