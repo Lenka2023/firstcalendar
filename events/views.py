@@ -8,10 +8,13 @@ def index(request):
        rem_data=request.POST   
        st=request.POST.get('st')
        et=request.POST.get('et')
-       rem=request.POST.get('rem') 
-   #if et='st'+10:
-            # rem=''  
-       contacts_form_data.update({'rem':rem})
+       
+       if int(et)<int(st)+10:
+             rem=request.POST.get('rem')
+       elif int(et)<int(st)+10:
+                rem='' 
+
+       #contacts_form_data.update({'rem':rem})
    context = {
    'page_header': 'Contacts_form',
    'contacts_form_data':contacts_form_data,
@@ -27,4 +30,4 @@ def index(request):
          #if et=st+10:
             # rem=''  
 
-	
+    
