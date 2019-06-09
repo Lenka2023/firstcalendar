@@ -14,7 +14,7 @@ def index(request):
        elif int(et)<int(st)+10:
                 rem='' 
 
-       #contacts_form_data.update({'rem':rem})
+       contacts_form_data.update({'rem':rem})
    context = {
    'page_header': 'Contacts_form',
    'contacts_form_data':contacts_form_data,
